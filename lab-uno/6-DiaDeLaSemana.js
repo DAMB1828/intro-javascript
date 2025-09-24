@@ -11,4 +11,4 @@ function diaDeLaSemana(dias) {
   }
 }
 
-console.log(diaDeLaSemana(8));
+console.log(diaDeLaSemana(5))

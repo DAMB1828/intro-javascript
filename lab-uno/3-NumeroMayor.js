@@ -12,7 +12,7 @@ function elMayor(primerNumero, segundoNumero) {
   }
 }
 
-let primerNumero = 80
+let primerNumero = 30
 let segundoNumero = 28
 let numeroMasGrande = elMayor(primerNumero, segundoNumero)
 console.log(`El número más grande entre ${primerNumero} y ${segundoNumero} es: ${numeroMasGrande}`)

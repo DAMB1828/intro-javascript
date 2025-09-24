@@ -5,16 +5,16 @@
  */
 
 function contarVocales(cadena) {
-  const vocales = "aeiouAEIOU";
-  let contador = 0;
+  const vocales = "aeiouAEIOU"
+  let contador = 0
   for (const caracter of cadena) {
     if (vocales.includes(caracter)) {
-      contador++;
+      contador++
     }
   }
-  return contador;
+  return contador
 }
 
-const texto = "Programación en JavaScript";
-const cantidadVocales = contarVocales(texto);
-console.log(`La cantidad de vocales en "${texto}" es: ${cantidadVocales}`);
+const texto = "Programación en JavaScript"
+const cantidadVocales = contarVocales(texto)
+console.log(`La cantidad de vocales en "${texto}" es: ${cantidadVocales}`)

@@ -6,19 +6,19 @@
 
 function encontrarCadenaMasLarga(arrCadenas) {
   if (arrCadenas.length === 0) {
-    return "";
+    return "La cadena está vacía"
   }
 
-  let cadenaMasLarga = arrCadenas[0];
+  let cadenaMasLarga = arrCadenas[0]
   for (let i = 1; i < arrCadenas.length; i++) {
     if (arrCadenas[i].length > cadenaMasLarga.length) {
-      cadenaMasLarga = arrCadenas[i];
+      cadenaMasLarga = arrCadenas[i]
     }
   }
 
-  return cadenaMasLarga;
+  return cadenaMasLarga
 }
 
-const cadenas = ["gato", "elefante", "murciélago", "perro"];
-const masLarga = encontrarCadenaMasLarga(cadenas);
-console.log(masLarga);
+const cadenas = ["gato", "elefante", "murciélago", "perro"]
+const masLarga = encontrarCadenaMasLarga(cadenas)
+console.log(masLarga)
