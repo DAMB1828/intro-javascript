@@ -14,27 +14,48 @@
   }
   h1 {
     color: #8a2be2;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #b3b3b3;
+    margin-bottom: 30px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
+    gap: 20px; /* Espacio entre los botones */
+    max-width: 600px;
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
   }
   ul {
-    list-style: none;
-    padding: 0;
+    display: contents; /* Permite que los <li> sean elementos de la cuadrícula */
   }
   li {
-    margin: 12px 0;
+    list-style: none;
+    margin: 0;
   }
   button {
-    padding: 10px 20px;
+    width: 100%; /* El botón ocupa todo el ancho de su celda */
+    padding: 15px;
     background: #6a0dad;
     color: white;
     border: 2px solid #8a2be2;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s ease, border-color 0.3s ease;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
   }
   button:hover {
     background: #8a2be2;
     border-color: #6a0dad;
+    transform: translateY(-2px); /* Un pequeño efecto de elevación */
+  }
+  button:active {
+    transform: translateY(0);
   }
 </style>
 </head>
@@ -42,18 +63,19 @@
 <h1>Laboratorio de Ejercicios</h1>
 <p>Selecciona un ejercicio y revisa la consola del navegador (F12 → Consola)</p>
 
-<ul>
-  <li><button onclick="cargarEjercicio('3-NumeroMayor.js')">3 - Número Mayor</button></li>
-  <li><button onclick="cargarEjercicio('6-DiaDeLaSemana.js')">6 - Día de la Semana</button></li>
-  <li><button onclick="cargarEjercicio('14-NumerosPares.js')">14 - Números Pares</button></li>
-  <li><button onclick="cargarEjercicio('15-TablaDeMultiplicar.js')">15 - Tabla de Multiplicar</button></li>
-  <li><button onclick="cargarEjercicio('24-CadenaMasLarga.js')">24 - Cadena Más Larga</button></li>
-  <li><button onclick="cargarEjercicio('26-CantidadDeVocales.js')">26 - Cantidad de Vocales</button></li>
-</ul>
+<div class="grid-container">
+  <ul>
+    <li><button onclick="cargarEjercicio('3-NumeroMayor.js')">3 - Número Mayor</button></li>
+    <li><button onclick="cargarEjercicio('6-DiaDeLaSemana.js')">6 - Día de la Semana</button></li>
+    <li><button onclick="cargarEjercicio('14-NumerosPares.js')">14 - Números Pares</button></li>
+    <li><button onclick="cargarEjercicio('15-TablaDeMultiplicar.js')">15 - Tabla de Multiplicar</button></li>
+    <li><button onclick="cargarEjercicio('24-CadenaMasLarga.js')">24 - Cadena Más Larga</button></li>
+    <li><button onclick="cargarEjercicio('26-CantidadDeVocales.js')">26 - Cantidad de Vocales</button></li>
+  </ul>
+</div>
 
 <script>
   function cargarEjercicio(nombreArchivo) {
-    // Elimina cualquier script previamente cargado para evitar conflictos
     const scripts = document.querySelectorAll('script[data-ejercicio]');
     scripts.forEach(script => script.remove());
 
